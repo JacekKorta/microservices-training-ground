@@ -1,0 +1,3 @@
+[submodule "go.stack-questions"]
+	path = go.stack-questions
+	url = git@github.com:JacekKorta/go.stack-app.git
