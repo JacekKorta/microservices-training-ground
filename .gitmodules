@@ -1,3 +1,6 @@
 [submodule "go.stack-questions"]
 	path = go.stack-questions
 	url = git@github.com:JacekKorta/go.stack-app.git
+[submodule "rabbitmq"]
+	path = rabbitmq
+	url = git@github.com:JacekKorta/mtg.rabbitmq.git

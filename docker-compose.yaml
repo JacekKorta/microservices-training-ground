@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  rabbitmq-1:
+    image: rabbitmq:3.9.21-management-alpine
+    hostname: rabbitmq-1
+    ports:
+      - 5672:5672
+      - 15672:15672
+      - 25672:25672
+    volumes:
+      - ./rabbitmq/rabbitmq-1/:/etc/rabbitmq/conf.d/
