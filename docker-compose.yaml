@@ -4,9 +4,27 @@ services:
   rabbitmq-1:
     image: rabbitmq:3.9.21-management-alpine
     hostname: rabbitmq-1
+    container_name: rabbitmq-1-container
     ports:
       - 5672:5672
       - 15672:15672
       - 25672:25672
     volumes:
       - ./rabbitmq/rabbitmq-1/:/etc/rabbitmq/conf.d/
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:15672"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+  go-stack-questions:
+    build:
+      context: ./go.stack-questions/
+      dockerfile: Dockerfile
+    container_name: go-stack-questions-container
+    env_file:
+      - ./go.stack-questions/.env
+    environment:
+      - RABBITMQ_HOST=rabbitmq-1
+    restart: on-failure
+    links:
+      - rabbitmq-1
