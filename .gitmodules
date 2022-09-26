@@ -4,3 +4,6 @@
 [submodule "rabbitmq"]
 	path = rabbitmq
 	url = git@github.com:JacekKorta/mtg.rabbitmq.git
+[submodule "py.deduplicator"]
+	path = py.deduplicator
+	url = git@github.com:JacekKorta/py.deduplicator.git
