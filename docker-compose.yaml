@@ -1,6 +1,16 @@
-version: '3.8'
+version: '3.9'
 
 services:
+  redis-1:
+    image: redis:7.0.5-alpine
+    hostname: redis-1
+    ports:
+      - 6379:6379
+    healthcheck:
+      test: redis-cli ping
+      interval: 3s
+      timeout: 5s
+      retries: 5
   rabbitmq-1:
     image: rabbitmq:3.9.21-management-alpine
     hostname: rabbitmq-1
@@ -28,3 +38,17 @@ services:
     restart: on-failure
     links:
       - rabbitmq-1
+  py-deduplicator:
+    build:
+      context: ./py.deduplicator/
+      dockerfile: Dockerfile
+    container_name: py-deduplicator-container
+    env_file:
+      - ./py.deduplicator/.env
+    environment:
+      - RABBITMQ_HOST=rabbitmq-1
+      - REDIS_HOST=redis-1
+    restart: on-failure
+    links:
+      - rabbitmq-1
+      - redis-1
