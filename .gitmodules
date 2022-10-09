@@ -1,9 +1,12 @@
 [submodule "go.stack-questions"]
 	path = go.stack-questions
-	url = git@github.com:JacekKorta/go.stack-app.git
+	url = ../go.stack-app.git
 [submodule "rabbitmq"]
 	path = rabbitmq
-	url = git@github.com:JacekKorta/mtg.rabbitmq.git
+	url = ../mtg.rabbitmq.git
 [submodule "py.deduplicator"]
 	path = py.deduplicator
-	url = git@github.com:JacekKorta/py.deduplicator.git
+	url = ../py.deduplicator.git
+[submodule "go.message-tagger"]
+	path = go.message-tagger
+	url = ../go.message-tagger.git

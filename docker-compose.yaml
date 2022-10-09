@@ -52,3 +52,15 @@ services:
     links:
       - rabbitmq-1
       - redis-1
+  go-message-tagger:
+    build:
+      context: ./go.message-tagger/
+      dockerfile: Dockerfile
+    container_name: go-message-taggers-container
+    env_file:
+      - ./go.message-tagger/.env
+    environment:
+      - RABBITMQ_HOST=rabbitmq-1
+    restart: on-failure
+    links:
+      - rabbitmq-1
