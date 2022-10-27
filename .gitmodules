@@ -10,3 +10,5 @@
 [submodule "go.message-tagger"]
 	path = go.message-tagger
 	url = ../go.message-tagger.git
+[submodule "go.discord-publisher"]
+	path = go.discord-publisher
