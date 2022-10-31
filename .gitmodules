@@ -1,6 +1,6 @@
 [submodule "go.stack-questions"]
 	path = go.stack-questions
-	url = ../go.stack-app.git
+	url = ../go.stack-app
 [submodule "rabbitmq"]
 	path = rabbitmq
 	url = ../mtg.rabbitmq.git
@@ -12,3 +12,4 @@
 	url = ../go.message-tagger.git
 [submodule "go.discord-publisher"]
 	path = go.discord-publisher
+	url = ../go.discord-publisher
