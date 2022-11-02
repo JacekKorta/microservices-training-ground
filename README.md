@@ -1,7 +1,7 @@
 # microservices-training-ground
 <a href="https://www.repostatus.org/#wip"><img src="https://www.repostatus.org/badges/latest/wip.svg" alt="Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public." /></a><br>
 
-### Description
+## Description
 
 The main goal of this project is to create an environment for learning and tests which  includes the group of microservices. 
 To make this project more “real” I developed a group of microservices which main task is to observe stackoverflow topics and download interesting questions. 
@@ -26,7 +26,15 @@ As a final step, messages with additional information are sent by [go.discord-pu
 Diagram:
 ![mtg diagram](/mtg-diagram.png "microservices trainig ground diagram")
 
-### How to run?
+## Sub services
+
+1. [go.stack-questions](https://github.com/JacekKorta/go.stack-app/tree/master)
+2. py.deduplicator
+3. go.message-tagger
+4. go.discord-publisher
+
+
+## How to run?
 First download the main repository:
 
 ```bash
@@ -39,7 +47,7 @@ Then update/init all submodules
 git submodule update --init
 ```
 
-Setup all sub services. More detail in each repo Readme file.
+Setup all sub services. See each services's readme file for more information.
 
 Finally you can start:
 ```bash
@@ -47,6 +55,6 @@ docker-compose up
 ```
 
 ---
-##### Warning!
+#### Warning!
 The configuration is not production ready. <br>
 
