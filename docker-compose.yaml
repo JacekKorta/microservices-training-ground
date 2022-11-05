@@ -64,3 +64,15 @@ services:
     restart: on-failure
     links:
       - rabbitmq-1
+  go-discord-publisher:
+    build:
+      context: ./go.discord-publisher/
+      dockerfile: Dockerfile
+    container_name: go-discord-publisher-container
+    env_file:
+      - ./go.discord-publisher/.env
+    environment:
+      - RABBITMQ_HOST=rabbitmq-1
+    restart: on-failure
+    links:
+      - rabbitmq-1
