@@ -29,9 +29,9 @@ Diagram:
 ## Sub services
 
 1. [go.stack-questions](https://github.com/JacekKorta/go.stack-app/tree/master)
-2. py.deduplicator
-3. go.message-tagger
-4. go.discord-publisher
+2. [py.deduplicator](https://github.com/JacekKorta/py.deduplicator/tree/master)
+3. [go.message-tagger](https://github.com/JacekKorta/go.message-tagger/tree/master)
+4. [go.discord-publisher](https://github.com/JacekKorta/go.discord-publisher/tree/master)
 
 
 ## How to run?
